@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 class="title">_                                                         
+ | |                                                          
+ | |_ __ _ _ __ ___  _ __   ___ _ __ ___ _ __   __ _  ___ ___ 
+ | __/ _` | '_ ` _ \| '_ \ / _ \ '__/ __| '_ \ / _` |/ __/ _ \
+ | || (_| | | | | | | |_) |  __/ |_ \__ \ |_) | (_| | (_|  __/
+  \__\__,_|_| |_| |_| .__/ \___|_(_)|___/ .__/ \__,_|\___\___|
+                    | |                 | |                   
+                    |_|                 |_|                   
+    </h2>
+    
+    <script>
+        function createDot(x, y) {
+            let star = document.createElement("h2");
+            star.innerHTML = "."
+            star.setAttribute("class", "dot");
+            star.setAttribute("style", "left:" + x + "px;top:" + y + "px;");
+            document.getElementsByTagName("body")[0].appendChild(star);
+            setTimeout(function(){star.remove();},500);
+            return star;
+        }
+
+        function spawnDots() {
+            setInterval(()=> {
+                for (var i = 0; i < 1000; i++) {
+                    createDot(
+                        Math.floor(Math.random() * 2500),
+                        Math.floor(Math.random() * 2500)
+                    );
+                }
+            }, 500)
+        }
+
+        spawnDots()
+
+    </script>
+</body>

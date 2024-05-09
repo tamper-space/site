@@ -1,0 +1,21 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #151515;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    font-family: monospace;
+    white-space: pre;
+    color:#fff;
+    background: #151515;
+}
+
+.dot {
+    position: absolute;
+    color: #fff;
+}
